@@ -1,0 +1,4 @@
+<button class="button p-4" [ngClass]="{'rounded-full' : icon, 'rounded-xl':text}">
+    <span *ngIf="text">{{text}}</span>
+    <ng-icon *ngIf="icon" [name]="icon"></ng-icon>
+</button>

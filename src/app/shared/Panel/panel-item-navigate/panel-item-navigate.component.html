@@ -1,0 +1,4 @@
+<a [routerLink]="route" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact : true}"  (click)="setActive()" class="router flex p-2 items-center text-lg  text-md text-[#41474C] gap-2">
+    <ng-icon *ngIf="icon" [name]="icon" class="text-gray-400"></ng-icon>
+    <span>{{text}}</span>
+</a>
