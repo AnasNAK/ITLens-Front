@@ -1,0 +1,17 @@
+<ul class="space-y-2">
+    <li *ngFor="let subject of subjects" class="ml-4">
+      <div class="flex items-center cursor-pointer" (click)="toggleSubject(subject.id)">
+        <i-lucide 
+          [name]="isExpanded(subject.id) ? 'chevron-down' : 'chevron-right'" 
+          class="w-4 h-4 mr-2"
+          *ngIf="hasSubSubjects(subject)"
+        ></i-lucide>
+        <span>{{ subject.title }}</span>
+      </div>
+      <ng-container *ngIf="hasSubSubjects(subject) && isExpanded(subject.id)">
+        <app-subject [subjects]="subject.subSubjects!"></app-subject>
+      </ng-container>
+    </li>
+  </ul>
+  
+  
