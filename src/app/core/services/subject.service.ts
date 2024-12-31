@@ -12,7 +12,7 @@ export class SubjectService {
   constructor(private http: HttpClient) {}
 
   getSubjectsByEdition(editionId: number): Observable<Subject[]> {
-    return this.http.get<Subject[]>(`${this.apiUrl}/edition/${editionId}`);
+    return this.http.get<Subject[]>(`${this.apiUrl}`);
   }
 
   createSubject(subject: Omit<Subject, 'id'>): Observable<Subject> {

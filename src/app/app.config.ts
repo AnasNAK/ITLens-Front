@@ -15,7 +15,9 @@ import {
   User,
   Calendar,
   Clock,
-  Plus
+  Plus,
+  ChevronDown,
+  ChevronRight
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -35,7 +37,9 @@ export const appConfig: ApplicationConfig = {
         User,
         Calendar,
         Clock,
-        Plus
+        Plus,
+        ChevronDown,
+        ChevronRight
       })
     )
   ]

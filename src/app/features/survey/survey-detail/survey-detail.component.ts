@@ -11,7 +11,7 @@ import { SurveyEditionFormComponent } from '../../survey-edition/survey-edition-
 @Component({
   selector: 'app-survey-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule, LucideAngularModule, SurveyEditionFormComponent],
+  imports: [CommonModule, RouterModule, LucideAngularModule, SurveyEditionFormComponent ],
   templateUrl: './survey-detail.component.html',
   styleUrls: ['./survey-detail.component.scss']
 })
@@ -87,7 +87,7 @@ export class SurveyDetailComponent implements OnInit {
   }
 
   navigateToEditionDetail(editionId: number): void {
-    this.router.navigate(['/survey-editions', editionId]);
+    this.router.navigate(['/surveys/survey-editions', editionId]);
   }
 }
 

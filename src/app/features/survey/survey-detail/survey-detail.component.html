@@ -25,7 +25,7 @@
 
         <div class="mt-6">
             <h3 class="text-xl font-semibold mb-3">Survey Editions</h3>
-            <div *ngIf="showEditionForm">
+            <div *ngIf="showEditionForm" class="mb-4">
                 <app-survey-edition-form 
                     [surveyId]="survey.id"
                     (formSubmit)="onEditionFormSubmit($event)"
@@ -33,11 +33,9 @@
                 </app-survey-edition-form>
             </div>
             <div class="space-y-3">
-                <div *ngFor="let edition of survey.surveyEditions" 
-                     class="bg-gray-50 p-3 rounded-md cursor-pointer hover:bg-gray-100"
-                     (click)="navigateToEditionDetail(edition.id)">
+                <div *ngFor="let edition of survey.surveyEditions" class="bg-gray-50 p-3 rounded-md">
                     <div class="flex items-center justify-between">
-                        <span class="font-medium">Edition #{{ edition.id }}</span>
+                        <a [routerLink]="['/surveys/survey-editions', edition.id]" class="font-medium">Edition #{{ edition.id }}</a>
                         <span class="text-sm text-gray-500">
                             <i-lucide name="clock" class="w-4 h-4 inline-block mr-1"></i-lucide>
                             {{ edition.creationDate | date }}

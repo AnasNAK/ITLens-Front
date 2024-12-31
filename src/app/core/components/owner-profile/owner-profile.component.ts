@@ -10,6 +10,6 @@ import { LucideAngularModule } from 'lucide-angular';
   styleUrls: ['./owner-profile.component.scss']
 })
 export class OwnerProfileComponent {
-  @Input() owner: { name: string, email: string } = { name: 'John Doe', email: 'john@example.com' };
+  @Input() owner: { name: string } = { name: 'default anas' };
 }
 

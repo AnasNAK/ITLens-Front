@@ -1,28 +1,26 @@
-import { Survey } from "./survey.model";
+import { Survey } from './survey.model';
+import { Subject } from './subject.model';
 
 export interface SurveyEdition {
-    id: number;
-    survey: Survey;
-    creationDate: Date;
-    startDate: Date;
-    endDate: Date;
-    year: number; 
+  id: number;
+  survey: Survey;
+  creationDate: string;
+  startDate: string;
+  endDate: string;
+  year: number;
+  subjects?: Subject[];
 }
 
 export interface CreateSurveyEditionDto {
-    surveyId: number;
-    creationDate: Date;
-    startDate: Date;
-    endDate: Date;
-    year: number; 
+  surveyId: number;
+  creationDate: string;
+  startDate: string;
+  endDate: string;
+  year: number;
 }
 
-// export function createSurveyEditionDto(dto: CreateSurveyEditionDto): Omit<SurveyEdition, 'id' | 'survey'> {
-//     return {
-//         creationDate: dto.creationDate,
-//         startDate: dto.startDate,
-//         endDate: dto.endDate,
-//         year: dto.year
-//     };
-// }
+export interface SurveyEditionWithSubjects {
+  surveyEdition: SurveyEdition;
+  subjects: Subject[];
+}
 
